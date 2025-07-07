@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧬 Organização PivotPHP
+# Organização PivotPHP
 
 **O Ecossistema PHP Evolutivo**
 
@@ -14,13 +14,13 @@
 
 ---
 
-### ⚡ 52M+ ops/seg | 🧬 Sintaxe Express.js | 🛡️ Pronto para produção | 🔧 Zero config
+### 13.374 req/seg | Sintaxe Express.js | Pronto para produção | Zero config
 
 ---
 
 </div>
 
-## 🎯 Nossa Missão
+## Nossa Missão
 
 **Tornar o desenvolvimento PHP alegre novamente.**
 
@@ -32,18 +32,18 @@ Estamos construindo um ecossistema onde:
 - **Experiência do desenvolvedor importa**, do primeiro `composer require` ao deploy em produção
 - **Evolução é incentivada**, deixando seu código crescer naturalmente
 
-## 🌟 Nosso Ecossistema
+## Nosso Ecossistema
 
 <table>
 <tr>
 <td width="50%">
 
-### 🚀 Framework Core
+### Framework Core
 **[pivotphp-core](https://github.com/pivotphp/pivotphp-core)**
 O coração do PivotPHP. Microframework rápido e sem opiniões com sintaxe inspirada no Express.js.
 
 ```php
-$app = new App();
+$app = new Application();
 $app->get('/ola/:nome', fn($req, $res) =>
     $res->json(['mensagem' => "Olá, {$req->params->nome}!"])
 );
@@ -53,7 +53,7 @@ $app->listen(8000);
 </td>
 <td width="50%">
 
-### 🗄️ Integração com Banco
+### Integração com Banco
 **[pivotphp-cycle-orm](https://github.com/pivotphp/pivotphp-cycle-orm)**
 Camada de banco zero-config com Cycle ORM. Alta performance e type safety.
 
@@ -67,14 +67,14 @@ $usuarios = Usuario::where('ativo', true)->get();
 <tr>
 <td width="50%">
 
-### 🌐 Site Oficial
+### Site Oficial
 **[website](https://github.com/pivotphp/website)**
 Documentação, guias e site de marketing. Construído com Jekyll para velocidade e simplicidade.
 
 </td>
 <td width="50%">
 
-### 📚 Coleção de Exemplos
+### Coleção de Exemplos
 **[examples](https://github.com/pivotphp/examples)**
 Aplicações do mundo real mostrando padrões e melhores práticas do PivotPHP.
 
@@ -82,21 +82,21 @@ Aplicações do mundo real mostrando padrões e melhores práticas do PivotPHP.
 </tr>
 </table>
 
-## 📊 Pelos Números
+## Pelos Números
 
 <div align="center">
 
 | Métrica | Valor |
 |---------|-------|
-| **Performance** | 52M+ operações/segundo |
+| **Performance** | 13.374 requisições/segundo |
 | **Versão PHP** | 8.1+ |
-| **Uso de Memória** | ~8MB média |
-| **Tempo de Resposta** | <0.05ms média |
+| **Uso de Memória** | 0-2MB média |
+| **Tempo de Resposta** | 0.07ms média |
 | **Dependências** | Core mínimo |
 
 </div>
 
-## 🛠️ Construído para PHP Moderno
+## Construído para PHP Moderno
 
 ```php
 // Sintaxe limpa e expressiva
@@ -118,7 +118,7 @@ $ws = new WebSocket\Server($app);
 $ws->on('message', fn($socket, $dados) => $socket->broadcast('update', $dados));
 ```
 
-## 🚀 Começando
+## Começando
 
 ### Para Desenvolvedores
 ```bash
@@ -135,7 +135,7 @@ cd pivotphp-core
 composer install && composer test
 ```
 
-## 🌍 Comunidade
+## Comunidade
 
 <div align="center">
 
@@ -147,46 +147,46 @@ composer install && composer test
 
 </div>
 
-### 🤝 Como Contribuir
+### Como Contribuir
 
 Acreditamos que grandes softwares vêm de grandes comunidades. Veja como você pode ajudar:
 
-- **🐛 Reporte bugs** e solicite recursos em nossas [Issues](https://github.com/pivotphp/pivotphp-core/issues)
-- **💻 Submeta código** via Pull Requests em qualquer um dos nossos repositórios
-- **📖 Melhore docs** editando nosso [website](https://github.com/pivotphp/website)
-- **💬 Ajude outros** no [Discord](https://discord.gg/pivotphp) e [Discussions](https://github.com/orgs/pivotphp/discussions)
-- **🌟 Espalhe a palavra** dando estrela nos repos e compartilhando com amigos
+- **Reporte bugs** e solicite recursos em nossas [Issues](https://github.com/pivotphp/pivotphp-core/issues)
+- **Submeta código** via Pull Requests em qualquer um dos nossos repositórios
+- **Melhore docs** editando nosso [website](https://github.com/pivotphp/website)
+- **Ajude outros** no [Discord](https://discord.gg/pivotphp) e [Discussions](https://github.com/orgs/pivotphp/discussions)
+- **Espalhe a palavra** dando estrela nos repos e compartilhando com amigos
 
-## 💡 Filosofia
+## Filosofia
 
-### 🧬 Design Evolutivo
+### Design Evolutivo
 Como DNA que se adapta a diferentes ambientes, o PivotPHP evolui com seu projeto. Comece simples, escale complexo, nunca reescreva.
 
-### ⚡ Performance Primeiro
+### Performance Primeiro
 Cada linha de código é otimizada. Medimos tudo e tornamos a performance visível, porque APIs rápidas fazem usuários felizes.
 
-### 🎯 Felicidade do Desenvolvedor
+### Felicidade do Desenvolvedor
 O melhor framework é aquele que você não pensa sobre. PivotPHP sai do seu caminho enquanto fornece as ferramentas que você precisa.
 
-### 🌱 Dirigido pela Comunidade
+### Dirigido pela Comunidade
 Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pensando no uso do mundo real, não em ideais acadêmicos.
 
-## 📈 Roadmap
+## Roadmap
 
 <details>
-<summary><strong>🎯 Foco Atual (Q3 2025)</strong></summary>
+<summary><strong>Foco Atual (Q3 2025)</strong></summary>
 
-- ✅ Estabilização do framework core
-- ✅ Integração com Cycle ORM
-- ✅ Coleção básica de middleware
-- 🔄 Suite de benchmarking de performance
-- 🔄 Ferramenta CLI oficial
-- ⏳ Package de utilitários de teste
+- Estabilização do framework core ✅
+- Integração com Cycle ORM ✅
+- Coleção básica de middleware ✅
+- Suite de benchmarking de performance (em progresso)
+- Ferramenta CLI oficial (em progresso)
+- Package de utilitários de teste (planejado)
 
 </details>
 
 <details>
-<summary><strong>🚀 Em Breve (Q4 2025)</strong></summary>
+<summary><strong>Em Breve (Q4 2025)</strong></summary>
 
 - Integração com servidor WebSocket
 - Camada avançada de cache
@@ -198,7 +198,7 @@ Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pe
 </details>
 
 <details>
-<summary><strong>🌟 Visão Futura (2026)</strong></summary>
+<summary><strong>Visão Futura (2026)</strong></summary>
 
 - Suporte GraphQL
 - Subscriptions em tempo real
@@ -209,29 +209,29 @@ Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pe
 
 </details>
 
-## 👨‍💻 Sobre o Criador
+## Sobre o Criador
 
 **[Caio Alberto Fernandes](https://github.com/CAFernandes)** começou o PivotPHP após 6 anos de frustração com frameworks PHP existentes. O que começou como um experimento de fim de semana para trazer a elegância do Express.js para o PHP cresceu e virou um movimento por melhores ferramentas para desenvolvedores.
 
 *"Acredito que os melhores frameworks são invisíveis—eles amplificam suas habilidades sem impor suas opiniões. PivotPHP é minha tentativa de construir essa camada invisível para desenvolvedores PHP."*
 
-## 📄 Licença & Suporte
+## Licença & Suporte
 
 - **Licença:** MIT (livre para uso comercial)
 - **Suporte:** Dirigido pela comunidade via Discord e GitHub
-- **Patrocínio:** [GitHub Sponsors](https://github.com/sponsors/pivotphp) 💖
+- **Patrocínio:** [GitHub Sponsors](https://github.com/sponsors/pivotphp)
 
 ---
 
 <div align="center">
 
-### 🌟 Dê estrela nos nossos repositórios para mostrar seu apoio!
+### Dê estrela nos nossos repositórios para mostrar seu apoio!
 
 **[Framework Core](https://github.com/pivotphp/pivotphp-core)** • **[Cycle ORM](https://github.com/pivotphp/pivotphp-cycle-orm)** • **[Website](https://github.com/pivotphp/website)** • **[Exemplos](https://github.com/pivotphp/examples)**
 
 ---
 
-**Feito com ❤️ pela comunidade PHP, para a comunidade PHP.**
+**Feito com amor pela comunidade PHP, para a comunidade PHP.**
 
 *PivotPHP: Código que evolui com você.*
 
