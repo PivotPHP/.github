@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧬 HelixPHP Organization
+# 🧬 PivotPHP Organization
 
 **The Evolutionary PHP Ecosystem**
 
@@ -8,9 +8,9 @@
 
 [![Inglês](https://img.shields.io/badge/README-em%20Ingl%C3%AAs-009c3b?style=flat&logo=Brazil&logoColor=white)](../README.md)
 [![Português](https://img.shields.io/badge/README-em%20Português-009c3b?style=flat&logo=Brazil&logoColor=white)](../README-pt.md)
-[![GitHub followers](https://img.shields.io/github/followers/helixphp?style=social)](https://github.com/helixphp)
-[![Twitter Follow](https://img.shields.io/twitter/follow/helixphp?style=social)](https://twitter.com/helixphp)
-[![Discord](https://img.shields.io/discord/placeholder?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/helixphp)
+[![GitHub followers](https://img.shields.io/github/followers/pivotphp?style=social)](https://github.com/pivotphp)
+[![Twitter Follow](https://img.shields.io/twitter/follow/pivotphp?style=social)](https://twitter.com/pivotphp)
+[![Discord](https://img.shields.io/discord/placeholder?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/pivotphp)
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Making PHP development joyful again.**
 
-After years of wrestling with heavyweight frameworks and rigid architectures, we believe PHP developers deserve better. HelixPHP isn't just a framework—it's a philosophy that code should evolve with your needs, not constrain them.
+After years of wrestling with heavyweight frameworks and rigid architectures, we believe PHP developers deserve better. PivotPHP isn't just a framework—it's a philosophy that code should evolve with your needs, not constrain them.
 
 We're building an ecosystem where:
 - **Performance comes first**, not as an afterthought
@@ -39,8 +39,8 @@ We're building an ecosystem where:
 <td width="50%">
 
 ### 🚀 Core Framework
-**[helixphp-core](https://github.com/helixphp/helixphp-core)**
-The heart of HelixPHP. Fast, unopinionated microframework with Express.js-inspired syntax.
+**[pivotphp-core](https://github.com/pivotphp/pivotphp-core)**
+The heart of PivotPHP. Fast, unopinionated microframework with Express.js-inspired syntax.
 
 ```php
 $app = new App();
@@ -54,7 +54,7 @@ $app->listen(8000);
 <td width="50%">
 
 ### 🗄️ Database Integration
-**[helixphp-cycle-orm](https://github.com/helixphp/helixphp-cycle-orm)**
+**[pivotphp-cycle-orm](https://github.com/pivotphp/pivotphp-cycle-orm)**
 Zero-config database layer with Cycle ORM. High performance and type safety.
 
 ```php
@@ -68,15 +68,15 @@ $users = User::where('active', true)->get();
 <td width="50%">
 
 ### 🌐 Official Website
-**[website](https://github.com/helixphp/website)**
+**[website](https://github.com/pivotphp/website)**
 Documentation, guides, and marketing site. Built with Jekyll for speed and simplicity.
 
 </td>
 <td width="50%">
 
 ### 📚 Examples Collection
-**[examples](https://github.com/helixphp/examples)**
-Real-world applications showcasing HelixPHP patterns and best practices.
+**[examples](https://github.com/pivotphp/examples)**
+Real-world applications showcasing PivotPHP patterns and best practices.
 
 </td>
 </tr>
@@ -122,16 +122,16 @@ $ws->on('message', fn($socket, $data) => $socket->broadcast('update', $data));
 
 ### For Developers
 ```bash
-# Create your first HelixPHP app
-composer create-project helixphp/skeleton my-api
+# Create your first PivotPHP app
+composer create-project pivotphp/skeleton my-api
 cd my-api && php -S localhost:8000
 ```
 
 ### For Contributors
 ```bash
 # Join the development
-git clone https://github.com/helixphp/helixphp-core.git
-cd helixphp-core
+git clone https://github.com/pivotphp/pivotphp-core.git
+cd pivotphp-core
 composer install && composer test
 ```
 
@@ -141,9 +141,9 @@ composer install && composer test
 
 **Join thousands of developers building the future of PHP**
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/helixphp)
-[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/helixphp/discussions)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow-1da1f2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/helixphp)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/pivotphp)
+[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/pivotphp/discussions)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1da1f2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/pivotphp)
 
 </div>
 
@@ -151,22 +151,22 @@ composer install && composer test
 
 We believe great software comes from great communities. Here's how you can help:
 
-- **🐛 Report bugs** and request features in our [Issues](https://github.com/helixphp/helixphp-core/issues)
+- **🐛 Report bugs** and request features in our [Issues](https://github.com/pivotphp/pivotphp-core/issues)
 - **💻 Submit code** via Pull Requests to any of our repositories
-- **📖 Improve docs** by editing our [website](https://github.com/helixphp/website)
-- **💬 Help others** in [Discord](https://discord.gg/helixphp) and [Discussions](https://github.com/orgs/helixphp/discussions)
+- **📖 Improve docs** by editing our [website](https://github.com/pivotphp/website)
+- **💬 Help others** in [Discord](https://discord.gg/pivotphp) and [Discussions](https://github.com/orgs/pivotphp/discussions)
 - **🌟 Spread the word** by starring our repos and sharing with friends
 
 ## 💡 Philosophy
 
 ### 🧬 Evolutionary Design
-Like DNA that adapts to different environments, HelixPHP evolves with your project. Start simple, scale complex, never rewrite.
+Like DNA that adapts to different environments, PivotPHP evolves with your project. Start simple, scale complex, never rewrite.
 
 ### ⚡ Performance First
 Every line of code is optimized. We measure everything and make performance visible, because fast APIs make happy users.
 
 ### 🎯 Developer Happiness
-The best framework is the one you don't think about. HelixPHP stays out of your way while providing the tools you need.
+The best framework is the one you don't think about. PivotPHP stays out of your way while providing the tools you need.
 
 ### 🌱 Community Driven
 Built by developers, for developers. Every decision is made with real-world usage in mind, not academic ideals.
@@ -211,15 +211,15 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 ## 👨‍💻 About the Creator
 
-**[Caio Alberto Fernandes](https://github.com/CAFernandes)** started HelixPHP after 6 years of frustration with existing PHP frameworks. What began as a weekend experiment to bring Express.js elegance to PHP has grown into a movement for better developer tools.
+**[Caio Alberto Fernandes](https://github.com/CAFernandes)** started PivotPHP after 6 years of frustration with existing PHP frameworks. What began as a weekend experiment to bring Express.js elegance to PHP has grown into a movement for better developer tools.
 
-*"I believe the best frameworks are invisible—they amplify your skills without imposing their opinions. HelixPHP is my attempt to build that invisible layer for PHP developers."*
+*"I believe the best frameworks are invisible—they amplify your skills without imposing their opinions. PivotPHP is my attempt to build that invisible layer for PHP developers."*
 
 ## 📄 License & Support
 
 - **License:** MIT (free for commercial use)
 - **Support:** Community-driven via Discord and GitHub
-- **Sponsorship:** [GitHub Sponsors](https://github.com/sponsors/helixphp) 💖
+- **Sponsorship:** [GitHub Sponsors](https://github.com/sponsors/pivotphp) 💖
 
 ---
 
@@ -227,12 +227,12 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 ### 🌟 Star our repositories to show your support!
 
-**[Core Framework](https://github.com/helixphp/helixphp-core)** • **[Cycle ORM](https://github.com/helixphp/helixphp-cycle-orm)** • **[Website](https://github.com/helixphp/website)** • **[Examples](https://github.com/helixphp/examples)**
+**[Core Framework](https://github.com/pivotphp/pivotphp-core)** • **[Cycle ORM](https://github.com/pivotphp/pivotphp-cycle-orm)** • **[Website](https://github.com/pivotphp/website)** • **[Examples](https://github.com/pivotphp/examples)**
 
 ---
 
 **Made with ❤️ by the PHP community, for the PHP community.**
 
-*HelixPHP: Code that evolves with you.*
+*PivotPHP: Code that evolves with you.*
 
 </div>
