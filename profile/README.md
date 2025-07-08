@@ -85,7 +85,10 @@ $app->get('/hello/:name', fn($req, $res) =>
     $res->json(['message' => "Hello, {$req->params->name}!"])
 );
 
-$app->listen(8000); // That's it! Zero boilerplate
+$app->run(); // That's it! Zero boilerplate
+
+// Start the development server:
+// php -S localhost:8000
 ```
 
 </td>

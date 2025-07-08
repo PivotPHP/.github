@@ -72,8 +72,11 @@ $app->get('/ola/:nome', fn($req, $res) =>
     $res->json(['mensagem' => "Olá, {$req->params->nome}!"])
 );
 
-// Inicie o servidor
-$app->listen(8000);
+// Execute a aplicação
+$app->run();
+
+// Para iniciar o servidor de desenvolvimento:
+// php -S localhost:8000
 ```
 
 </td>
@@ -175,7 +178,7 @@ $app->get('/', fn($req, $res) =>
     $res->send('Olá, PivotPHP! 🚀')
 );
 
-$app->listen(8000);
+$app->run();
 ```
 
 ### 🤝 Para Contribuidores
