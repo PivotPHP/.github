@@ -76,7 +76,10 @@ We're building an ecosystem where:
 <td width="50%">
 
 ### 💎 Core Framework
-**[pivotphp-core](https://github.com/pivotphp/pivotphp-core)**
+**[pivotphp-core](https://github.com/PivotPHP/pivotphp-core)** 
+[![Packagist](https://img.shields.io/packagist/v/pivotphp/core.svg)](https://packagist.org/packages/pivotphp/core)
+[![Downloads](https://img.shields.io/packagist/dt/pivotphp/core.svg)](https://packagist.org/packages/pivotphp/core)
+
 The heart of PivotPHP. Fast, unopinionated microframework with Express.js-inspired syntax.
 
 ```php
@@ -101,7 +104,11 @@ $app->run(); // That's it! Zero boilerplate
 <td width="50%">
 
 ### 🗄️ Cycle ORM Extension
-**[pivotphp-cycle-orm](https://github.com/pivotphp/pivotphp-cycle-orm)** `composer require pivotphp/cycle-orm`
+**[pivotphp-cycle-orm](https://github.com/PivotPHP/pivotphp-cycle-orm)** 
+[![Packagist](https://img.shields.io/packagist/v/pivotphp/cycle-orm.svg)](https://packagist.org/packages/pivotphp/cycle-orm)
+[![Downloads](https://img.shields.io/packagist/dt/pivotphp/cycle-orm.svg)](https://packagist.org/packages/pivotphp/cycle-orm)
+
+`composer require pivotphp/cycle-orm`
 
 Powerful database ORM integration with zero configuration.
 
@@ -131,7 +138,11 @@ $users = User::where('active', true)
 <td width="50%">
 
 ### ⚡ ReactPHP Extension
-**[pivotphp-reactphp](https://github.com/pivotphp/pivotphp-reactphp)** `composer require pivotphp/reactphp`
+**[pivotphp-reactphp](https://github.com/PivotPHP/pivotphp-reactphp)** 
+[![Packagist](https://img.shields.io/packagist/v/pivotphp/reactphp.svg)](https://packagist.org/packages/pivotphp/reactphp)
+[![Downloads](https://img.shields.io/packagist/dt/pivotphp/reactphp.svg)](https://packagist.org/packages/pivotphp/reactphp)
+
+`composer require pivotphp/reactphp`
 
 Async runtime for long-running applications.
 
@@ -156,46 +167,15 @@ $app->runAsync(); // Non-blocking event loop
 
 ### Community Extensions
 
-<table>
-<tr>
-<td width="33%">
+The PivotPHP ecosystem is designed to be extended! We're excited to see what the community will build.
 
-#### 📝 Swagger/OpenAPI
-**pivotphp/swagger**
-```php
-$app->register(new SwaggerProvider([
-    'version' => '3.0',
-    'title' => 'My API'
-]));
-```
-
-</td>
-<td width="33%">
-
-#### 📧 Mail Service
-**pivotphp/mail**
-```php
-$app->mail->send(
-    to: 'user@example.com',
-    subject: 'Welcome!',
-    template: 'welcome'
-);
-```
-
-</td>
-<td width="33%">
-
-#### 🚦 Queue System
-**pivotphp/queue**
-```php
-$app->queue->push(
-    new SendEmailJob($user)
-);
-```
-
-</td>
-</tr>
-</table>
+**Planned Extensions:**
+- 📝 **OpenAPI/Swagger** - Documentation generation
+- 📧 **Mail Service** - Email abstraction layer
+- 🚦 **Queue System** - Background job processing
+- 💾 **Advanced Caching** - Multi-driver support
+- 🔌 **WebSocket Server** - Real-time communication
+- 📊 **GraphQL** - Modern API queries
 
 ### Creating Your Own Extension
 
@@ -273,7 +253,7 @@ cd my-api && php -S localhost:8000
 ### 🤝 For Contributors
 ```bash
 # Join the development
-git clone https://github.com/pivotphp/pivotphp-core.git
+git clone https://github.com/PivotPHP/pivotphp-core.git
 cd pivotphp-core
 composer install && composer test
 ```
@@ -294,9 +274,9 @@ composer install && composer test
 
 We believe great software comes from great communities. Here's how you can help:
 
-- **Report bugs** and request features in our [Issues](https://github.com/pivotphp/pivotphp-core/issues)
+- **Report bugs** and request features in our [Issues](https://github.com/PivotPHP/pivotphp-core/issues)
 - **Submit code** via Pull Requests to any of our repositories
-- **Improve docs** by editing our [website](https://github.com/pivotphp/website)
+- **Improve docs** by editing our [website](https://github.com/PivotPHP/website)
 - **Help others** in [Discord](https://discord.gg/DMtxsP7z) and [Discussions](https://github.com/orgs/pivotphp/discussions)
 - **Spread the word** by starring our repos and sharing with friends
 
@@ -333,12 +313,12 @@ Built by developers, for developers. Every decision is made with real-world usag
 <details>
 <summary><strong>Coming Soon (Q4 2025)</strong></summary>
 
-**Official Extensions:**
-- pivotphp/websocket - Real-time WebSocket server
-- pivotphp/cache - Multi-driver caching (Redis, Memcached)
-- pivotphp/swagger - OpenAPI/Swagger auto-generation
-- pivotphp/queue - Background job processing
-- pivotphp/mail - Email service abstraction
+**Community Extensions:**
+- WebSocket server for real-time communication
+- Multi-driver caching (Redis, Memcached)
+- OpenAPI/Swagger auto-generation
+- Background job processing
+- Email service abstraction
 
 **Developer Tools:**
 - Docker development containers
@@ -385,7 +365,7 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 ### ⭐ Star our repositories to show your support!
 
-**[💎 Core Framework](https://github.com/pivotphp/pivotphp-core)** • **[🗄️ Cycle ORM](https://github.com/pivotphp/pivotphp-cycle-orm)** • **[📚 Website](https://github.com/pivotphp/website)** • **[🎓 Examples](https://github.com/pivotphp/examples)**
+**[💎 Core Framework](https://github.com/PivotPHP/pivotphp-core)** • **[🗄️ Cycle ORM](https://github.com/PivotPHP/pivotphp-cycle-orm)** • **[📚 Website](https://github.com/PivotPHP/website)** • **[🎓 Examples](https://github.com/PivotPHP/examples)**
 
 ---
 
