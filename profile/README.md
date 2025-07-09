@@ -69,6 +69,8 @@ We're building an ecosystem where:
 
 ## 🌐 Our Ecosystem
 
+### Core Framework & Official Extensions
+
 <table>
 <tr>
 <td width="50%">
@@ -86,21 +88,30 @@ $app->get('/hello/:name', fn($req, $res) =>
 );
 
 $app->run(); // That's it! Zero boilerplate
-
-// Start the development server:
-// php -S localhost:8000
 ```
+
+**Features:**
+- Express.js-inspired routing
+- PSR-7/PSR-15 compliant
+- Built-in security middleware
+- JWT & API Key authentication
+- v1.1.0: High-performance mode with object pooling
 
 </td>
 <td width="50%">
 
-### 🗄️ Database Integration
-**[pivotphp-cycle-orm](https://github.com/pivotphp/pivotphp-cycle-orm)**
-Zero-config database layer with Cycle ORM. High performance and type safety.
+### 🗄️ Cycle ORM Extension
+**[pivotphp-cycle-orm](https://github.com/pivotphp/pivotphp-cycle-orm)** `composer require pivotphp/cycle-orm`
+
+Powerful database ORM integration with zero configuration.
 
 ```php
 // 🔍 One line connection, type-safe queries
-DB::connect('mysql://user:pass@localhost/db');
+$app->register(new CycleServiceProvider([
+    'dbal' => ['databases' => ['default' => [
+        'connection' => 'mysql://user:pass@localhost/db'
+    ]]]
+]));
 
 $users = User::where('active', true)
     ->with('posts')
@@ -108,25 +119,110 @@ $users = User::where('active', true)
     ->get(); // Automatic query optimization
 ```
 
+**Features:**
+- Automatic migrations
+- Relationship management
+- Transaction support
+- Multiple database connections
+
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 📚 Official Website
-**[website](https://github.com/pivotphp/website)**
-Documentation, guides, and marketing site. Built with Jekyll for speed and simplicity.
+### ⚡ ReactPHP Extension
+**[pivotphp-reactphp](https://github.com/pivotphp/pivotphp-reactphp)** `composer require pivotphp/reactphp`
 
-</td>
-<td width="50%">
+Async runtime for long-running applications.
 
-### 🎓 Examples Collection
-**[examples](https://github.com/pivotphp/examples)**
-Real-world applications showcasing PivotPHP patterns and best practices.
+```php
+// 🔄 Continuous server without restarts
+$app->register(new ReactServiceProvider([
+    'server' => ['host' => '0.0.0.0', 'port' => 8080]
+]));
+
+$app->runAsync(); // Non-blocking event loop
+```
+
+**Features:**
+- Event-driven architecture
+- WebSocket support (coming soon)
+- Async I/O operations
+- Timer and periodic tasks
 
 </td>
 </tr>
 </table>
+
+### Community Extensions
+
+<table>
+<tr>
+<td width="33%">
+
+#### 📝 Swagger/OpenAPI
+**pivotphp/swagger**
+```php
+$app->register(new SwaggerProvider([
+    'version' => '3.0',
+    'title' => 'My API'
+]));
+```
+
+</td>
+<td width="33%">
+
+#### 📧 Mail Service
+**pivotphp/mail**
+```php
+$app->mail->send(
+    to: 'user@example.com',
+    subject: 'Welcome!',
+    template: 'welcome'
+);
+```
+
+</td>
+<td width="33%">
+
+#### 🚦 Queue System
+**pivotphp/queue**
+```php
+$app->queue->push(
+    new SendEmailJob($user)
+);
+```
+
+</td>
+</tr>
+</table>
+
+### Creating Your Own Extension
+
+```php
+// 1. Create Service Provider
+class MyExtensionServiceProvider extends ServiceProvider
+{
+    public function register(): void
+    {
+        $this->container->singleton('myservice', MyService::class);
+    }
+    
+    public function boot(): void
+    {
+        $this->app->get('/my-route', [MyController::class, 'handle']);
+    }
+}
+
+// 2. Register in your app
+$app->register(new MyExtensionServiceProvider());
+```
+
+**Extension Guidelines:**
+- Follow `pivotphp-{name}` naming convention
+- Provide comprehensive tests
+- Document with examples
+- Tag as `pivotphp-extension` on Packagist
 
 ## 📊 By the Numbers
 
@@ -225,8 +321,10 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 - Core framework stabilization ✅
 - Cycle ORM integration ✅
+- ReactPHP extension ✅
 - Basic middleware collection ✅
-- Performance benchmarking suite (in progress)
+- Performance benchmarking suite ✅
+- High-performance mode (v1.1.0) ✅
 - Official CLI tool (in progress)
 - Testing utilities package (planned)
 
@@ -235,23 +333,36 @@ Built by developers, for developers. Every decision is made with real-world usag
 <details>
 <summary><strong>Coming Soon (Q4 2025)</strong></summary>
 
-- WebSocket server integration
-- Advanced caching layer
-- OpenAPI/Swagger generation
+**Official Extensions:**
+- pivotphp/websocket - Real-time WebSocket server
+- pivotphp/cache - Multi-driver caching (Redis, Memcached)
+- pivotphp/swagger - OpenAPI/Swagger auto-generation
+- pivotphp/queue - Background job processing
+- pivotphp/mail - Email service abstraction
+
+**Developer Tools:**
 - Docker development containers
-- VS Code extension
-- Deployment guides
+- VS Code extension with snippets
+- PHPStorm plugin
+- Deployment guides (Heroku, AWS, DigitalOcean)
 
 </details>
 
 <details>
 <summary><strong>Future Vision (2026)</strong></summary>
 
-- GraphQL support
-- Real-time subscriptions
+**Advanced Extensions:**
+- pivotphp/graphql - GraphQL server implementation
+- pivotphp/grpc - gRPC service support
+- pivotphp/events - Distributed event bus
+- pivotphp/admin - Auto-admin panel generator
+- pivotphp/testing - Advanced testing utilities
+
+**Enterprise Features:**
+- Multi-tenancy support
+- Advanced security middleware
 - Microservices toolkit
 - Cloud platform integrations
-- Enterprise security features
 - Conference talks and workshops
 
 </details>
