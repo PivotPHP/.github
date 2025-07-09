@@ -12,7 +12,7 @@
 [![Português](https://img.shields.io/badge/README-em%20Português-009c3b?style=flat&logo=Brazil&logoColor=white)](../README-pt.md)
 [![GitHub followers](https://img.shields.io/github/followers/pivotphp?style=social)](https://github.com/pivotphp)
 [![Twitter Follow](https://img.shields.io/twitter/follow/pivotphp?style=social)](https://twitter.com/pivotphp)
-[![Discord](https://img.shields.io/discord/placeholder?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/pivotphp)
+[![Discord](https://img.shields.io/discord/placeholder?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/DMtxsP7z)
 
 ---
 
@@ -284,7 +284,7 @@ composer install && composer test
 
 **Join thousands of developers building the future of PHP**
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/pivotphp)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/DMtxsP7z)
 [![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/pivotphp/discussions)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1da1f2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/pivotphp)
 
@@ -297,7 +297,7 @@ We believe great software comes from great communities. Here's how you can help:
 - **Report bugs** and request features in our [Issues](https://github.com/pivotphp/pivotphp-core/issues)
 - **Submit code** via Pull Requests to any of our repositories
 - **Improve docs** by editing our [website](https://github.com/pivotphp/website)
-- **Help others** in [Discord](https://discord.gg/pivotphp) and [Discussions](https://github.com/orgs/pivotphp/discussions)
+- **Help others** in [Discord](https://discord.gg/DMtxsP7z) and [Discussions](https://github.com/orgs/pivotphp/discussions)
 - **Spread the word** by starring our repos and sharing with friends
 
 ## 💡 Philosophy
