@@ -16,7 +16,7 @@
 
 ---
 
-### ⚡ 13.374 req/seg | 🚀 Sintaxe Express.js | ⏱️ < 1ms Latência | 🧪 Perfeito para protótipos
+### ⚡ Benchmarks de Alta Performance | 🚀 Sintaxe Express.js | 🧪 Desenvolvimento Ativo | 🔬 Projeto de Pesquisa
 
 ---
 
@@ -26,9 +26,9 @@
 
 **Tornar o desenvolvimento PHP alegre novamente.**
 
-Depois de anos lutando com frameworks pesados e arquiteturas rígidas, acreditamos que os desenvolvedores PHP merecem algo melhor. PivotPHP não é apenas um framework—é uma filosofia de que o código deve evoluir com suas necessidades, não limitá-las.
+Depois de anos lutando com frameworks pesados e arquiteturas rígidas, acreditamos que os desenvolvedores PHP merecem algo melhor. PivotPHP é um framework experimental explorando padrões inspirados no Express.js em PHP.
 
-> **🚧 Status do Projeto**: PivotPHP está em desenvolvimento ativo. Perfeito para prototipagem, aprendizado e validação de conceitos de API. Estamos trabalhando duro para torná-lo pronto para produção!
+> **🧪 Status do Projeto**: PivotPHP é um projeto de pesquisa e desenvolvimento. Perfeito para prototipagem, aprendizado e validação de conceitos de API. Atualmente não recomendado para uso em produção.
 
 Estamos construindo um ecossistema onde:
 - ⚡ **Performance vem primeiro**, não como repensamento
@@ -42,10 +42,12 @@ Estamos construindo um ecossistema onde:
 <tr>
 <td>
 
-**🚀 Extremamente Rápido**
-- 13.374 req/s de throughput
-- < 1ms tempo de resposta
-- 0-2MB pegada de memória
+**🚀 APIs de Alta Performance**
+- Até 70,9M requisições/hora (ReactPHP)
+- 32,4M requisições/hora (Core)
+- 16,5M requisições/hora (com ORM)
+- 6-12MB pegada de memória
+- Benchmarks Docker padronizados
 
 </td>
 <td>
@@ -256,11 +258,12 @@ $app->register(new MyExtensionServiceProvider());
 
 | Métrica | Valor |
 |---------|-------|
-| **Performance** | 13.374 requisições/segundo |
-| **Versão PHP** | 8.1+ |
-| **Uso de Memória** | 0-2MB média |
-| **Tempo de Resposta** | 0.07ms média |
-| **Dependências** | Core mínimo |
+| **Throughput de API** | Até 70,9M requisições/hora |
+| **Performance Core** | 32,4M requisições/hora |
+| **Performance ORM** | 16,5M requisições/hora |
+| **Uso de Memória** | 6-12MB (varia por variante) |
+| **Extensões** | Core + ORM + ReactPHP |
+| **Status** | Pesquisa & Desenvolvimento |
 
 </div>
 

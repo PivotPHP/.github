@@ -16,7 +16,7 @@
 
 ---
 
-### ⚡ 13,374 req/s | 🚀 Express.js syntax | ⏱️ < 1ms Latency | 🧪 Perfect for prototyping
+### ⚡ High-Performance Benchmarks | 🚀 Express.js syntax | 🧪 Active Development | 🔬 Research Project
 
 ---
 
@@ -26,9 +26,9 @@
 
 **Making PHP development joyful again.**
 
-After years of wrestling with heavyweight frameworks and rigid architectures, we believe PHP developers deserve better. PivotPHP isn't just a framework—it's a philosophy that code should evolve with your needs, not constrain them.
+After years of wrestling with heavyweight frameworks and rigid architectures, we believe PHP developers deserve better. PivotPHP is an experimental framework exploring Express.js-inspired patterns in PHP.
 
-> **🚧 Project Status**: PivotPHP is under active development. Perfect for prototyping, learning, and validating API concepts. We're working hard to make it production-ready!
+> **🧪 Project Status**: PivotPHP is a research and development project. Perfect for prototyping, learning, and validating API concepts. Currently not recommended for production use.
 
 ## 🤔 Why PivotPHP?
 
@@ -36,10 +36,12 @@ After years of wrestling with heavyweight frameworks and rigid architectures, we
 <tr>
 <td>
 
-**🚀 Lightning Fast**
-- 13,374 req/s throughput
-- < 1ms response time
-- 0-2MB memory footprint
+**🚀 High-Performance APIs**
+- Up to 70.9M requests/hour (ReactPHP)
+- 32.4M requests/hour (Core)
+- 16.5M requests/hour (with ORM)
+- 6-12MB memory footprint
+- Docker-standardized benchmarks
 
 </td>
 <td>
@@ -52,10 +54,10 @@ After years of wrestling with heavyweight frameworks and rigid architectures, we
 </td>
 <td>
 
-**🧪 Ideal for Prototyping**
-- Rapid API development
-- Quick concept validation
-- Minimal setup time
+**🧪 Research & Development**
+- Rapid API prototyping
+- Framework concept validation
+- Experimental features testing
 
 </td>
 </tr>
@@ -94,11 +96,11 @@ $app->run(); // That's it! Zero boilerplate
 ```
 
 **Features:**
-- Express.js-inspired routing
-- PSR-7/PSR-15 compliant
-- Built-in security middleware
+- Express.js-inspired routing with regex constraints
+- PSR-7/PSR-15 hybrid implementation  
+- Built-in security middleware (CSRF, XSS, Rate limiting)
 - JWT & API Key authentication
-- v1.1.0: High-performance mode with object pooling
+- v1.1.0: High-performance mode with object pooling & lazy loading
 
 </td>
 <td width="50%">
@@ -127,10 +129,12 @@ $users = User::where('active', true)
 ```
 
 **Features:**
-- Automatic migrations
-- Relationship management
-- Transaction support
-- Multiple database connections
+- Zero-configuration setup
+- Automatic migrations & schema compilation
+- Repository pattern with type safety
+- Transaction middleware & monitoring
+- Multiple database connections (SQLite, MySQL)
+- v1.0.1: Performance profiling & query logging
 
 </td>
 </tr>
@@ -156,10 +160,12 @@ $app->runAsync(); // Non-blocking event loop
 ```
 
 **Features:**
-- Event-driven architecture
-- WebSocket support (coming soon)
-- Async I/O operations
-- Timer and periodic tasks
+- Continuous runtime without restarts
+- PSR-7 bridge compatibility
+- Event-driven architecture  
+- Memory management & isolation
+- Global state protection
+- v0.0.2: Stable production runtime
 
 </td>
 </tr>
@@ -169,8 +175,14 @@ $app->runAsync(); // Non-blocking event loop
 
 The PivotPHP ecosystem is designed to be extended! We're excited to see what the community will build.
 
+**Built-in Core Features:**
+- 📝 **OpenAPI/Swagger** - Automatic API documentation generation
+- ⚡ **High-Performance Mode** - Object pooling & lazy loading (v1.1.0)
+- 🚀 **JSON Optimization** - Buffer pooling for JSON operations (v1.1.1)
+- 🛡️ **Security Suite** - CSRF, XSS, Rate limiting built-in
+- 📊 **Performance Monitoring** - Real-time metrics and profiling
+
 **Planned Extensions:**
-- 📝 **OpenAPI/Swagger** - Documentation generation
 - 📧 **Mail Service** - Email abstraction layer
 - 🚦 **Queue System** - Background job processing
 - 💾 **Advanced Caching** - Multi-driver support
@@ -210,11 +222,12 @@ $app->register(new MyExtensionServiceProvider());
 
 | Metric | Value |
 |--------|-------|
-| **Performance** | 13,374 requests/second |
-| **PHP Version** | 8.1+ |
-| **Memory Usage** | 0-2MB average |
-| **Response Time** | 0.07ms average |
-| **Dependencies** | Minimal core |
+| **API Throughput** | Up to 70.9M requests/hour |
+| **Core Performance** | 32.4M requests/hour |
+| **ORM Performance** | 16.5M requests/hour |
+| **Memory Usage** | 6-12MB (varies by variant) |
+| **Extensions** | Core + ORM + ReactPHP |
+| **Status** | Research & Development |
 
 </div>
 
@@ -300,13 +313,13 @@ Built by developers, for developers. Every decision is made with real-world usag
 <summary><strong>Current Focus (Q3 2025)</strong></summary>
 
 - Core framework stabilization ✅
-- Cycle ORM integration ✅
-- ReactPHP extension ✅
+- Cycle ORM integration v1.0.1 ✅
+- ReactPHP extension v0.0.2 ✅ 
 - Basic middleware collection ✅
 - Performance benchmarking suite ✅
-- High-performance mode (v1.1.0) ✅
-- Official CLI tool (in progress)
-- Testing utilities package (planned)
+- High-performance mode v1.1.0 ✅
+- Production validation complete ✅
+- Testing utilities package (in progress)
 
 </details>
 
