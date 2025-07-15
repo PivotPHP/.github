@@ -36,12 +36,12 @@ After years of wrestling with heavyweight frameworks and rigid architectures, we
 <tr>
 <td>
 
-**🚀 High-Performance APIs**
-- Up to 70.9M requests/hour (ReactPHP)
-- 32.4M requests/hour (Core)
-- 16.5M requests/hour (with ORM)
-- 6-12MB memory footprint
-- Docker-standardized benchmarks
+**🚀 Exceptional Performance APIs**
+- 41,000+ ops/sec average (Core v1.1.4)
+- 105,786 ops/sec application creation
+- 0.0095ms average response time
+- Array Callable support (PHP 8.4+)
+- Docker-validated benchmarks
 
 </td>
 <td>
@@ -100,7 +100,7 @@ $app->run(); // That's it! Zero boilerplate
 - PSR-7/PSR-15 hybrid implementation  
 - Built-in security middleware (CSRF, XSS, Rate limiting)
 - JWT & API Key authentication
-- v1.1.0: High-performance mode with object pooling & lazy loading
+- v1.1.4: Architectural Excellence & Performance Optimization Edition
 
 </td>
 <td width="50%">
@@ -222,10 +222,10 @@ $app->register(new MyExtensionServiceProvider());
 
 | Metric | Value |
 |--------|-------|
-| **API Throughput** | Up to 70.9M requests/hour |
-| **Core Performance** | 32.4M requests/hour |
-| **ORM Performance** | 16.5M requests/hour |
-| **Memory Usage** | 6-12MB (varies by variant) |
+| **Core Performance** | 41,000+ ops/sec (v1.1.4) |
+| **Best Performance** | 105,786 ops/sec (app creation) |
+| **Latency** | 0.0095ms average time |
+| **Memory Usage** | ~17.5MB (all operations) |
 | **Extensions** | Core + ORM + ReactPHP |
 | **Status** | Research & Development |
 

@@ -42,12 +42,12 @@ Estamos construindo um ecossistema onde:
 <tr>
 <td>
 
-**🚀 APIs de Alta Performance**
-- Até 70,9M requisições/hora (ReactPHP)
-- 32,4M requisições/hora (Core)
-- 16,5M requisições/hora (com ORM)
-- 6-12MB pegada de memória
-- Benchmarks Docker padronizados
+**🚀 APIs de Performance Excepcional**
+- 41.000+ ops/sec média (Core v1.1.4)
+- 105.786 ops/sec criação de aplicação
+- 0,0095ms tempo médio de resposta
+- Suporte a Array Callable (PHP 8.4+)
+- Benchmarks Docker validados
 
 </td>
 <td>
@@ -103,7 +103,7 @@ $app->run(); // É isso! Zero boilerplate
 - Compatível com PSR-7/PSR-15
 - Middleware de segurança integrado
 - Autenticação JWT & API Key
-- v1.1.0: Modo de alta performance com object pooling
+- v1.1.4: Architectural Excellence & Performance Optimization Edition
 
 </td>
 <td width="50%">
@@ -258,10 +258,10 @@ $app->register(new MyExtensionServiceProvider());
 
 | Métrica | Valor |
 |---------|-------|
-| **Throughput de API** | Até 70,9M requisições/hora |
-| **Performance Core** | 32,4M requisições/hora |
-| **Performance ORM** | 16,5M requisições/hora |
-| **Uso de Memória** | 6-12MB (varia por variante) |
+| **Performance Core** | 41.000+ ops/sec (v1.1.4) |
+| **Melhor Performance** | 105.786 ops/sec (criação app) |
+| **Latência** | 0,0095ms tempo médio |
+| **Uso de Memória** | ~17.5MB (todas operações) |
 | **Extensões** | Core + ORM + ReactPHP |
 | **Status** | Pesquisa & Desenvolvimento |
 
