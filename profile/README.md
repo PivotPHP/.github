@@ -37,9 +37,9 @@ After years of wrestling with heavyweight frameworks and rigid architectures, we
 <td>
 
 **🚀 Exceptional Performance APIs**
-- 2.8M+ ops/sec average (Core v1.2.0)
-- 10.9M ops/sec application creation
-- 36.9M ops/sec OpenAPI generation
+- 2.122 req/sec peak HTTP (Docker v1.2.0)
+- 1.418 req/sec average HTTP performance
+- 3.6M ops/sec OpenAPI generation
 - Array Callable support (PHP 8.4+)
 - Docker-validated benchmarks
 
@@ -221,9 +221,9 @@ $app->register(new MyExtensionServiceProvider());
 
 | Metric | Value |
 |--------|-------|
-| **Core Performance** | 2.8M+ ops/sec (v1.2.0) |
-| **Best Performance** | 36.9M ops/sec (OpenAPI generation) |
-| **App Creation** | 10.9M ops/sec |
+| **HTTP Peak** | 2.122 req/sec (Docker v1.2.0) |
+| **OpenAPI Generation** | 3.6M ops/sec (Swagger UI) |
+| **HTTP Average** | 1.418 req/sec |
 | **Memory Usage** | ~17.5MB (all operations) |
 | **Extensions** | Core + ORM + ReactPHP |
 | **Status** | Research & Development |

@@ -43,9 +43,9 @@ Estamos construindo um ecossistema onde:
 <td>
 
 **🚀 APIs de Performance Excepcional**
-- 2,8M+ ops/sec média (Core v1.2.0)
-- 10,9M ops/sec criação de aplicação
-- 36,9M ops/sec geração OpenAPI
+- 2.122 req/seg pico HTTP (Docker v1.2.0)
+- 1.418 req/seg performance HTTP média
+- 3,6M ops/seg geração OpenAPI
 - Suporte a Array Callable (PHP 8.4+)
 - Benchmarks Docker validados
 
@@ -223,9 +223,9 @@ $app->register(new MyExtensionServiceProvider());
 
 | Métrica | Valor |
 |---------|-------|
-| **Performance Core** | 2,8M+ ops/sec (v1.2.0) |
-| **Melhor Performance** | 36,9M ops/sec (geração OpenAPI) |
-| **Criação App** | 10,9M ops/sec |
+| **HTTP Pico** | 2.122 req/seg (Docker v1.2.0) |
+| **Geração OpenAPI** | 3,6M ops/seg (Swagger UI) |
+| **HTTP Média** | 1.418 req/seg |
 | **Uso de Memória** | ~17.5MB (todas operações) |
 | **Extensões** | Core + ORM + ReactPHP |
 | **Status** | Pesquisa & Desenvolvimento |

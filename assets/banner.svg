@@ -89,7 +89,7 @@
       <rect x="0" y="0" width="120" height="32" rx="16"
             fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.4)" stroke-width="1" />
       <text x="60" y="21" font-family="Inter" font-size="14" font-weight="600"
-            text-anchor="middle" fill="#C084FC">13,374 req/sec</text>
+            text-anchor="middle" fill="#C084FC">2,122 req/sec</text>
 
       <!-- Response time badge -->
       <rect x="130" y="0" width="120" height="32" rx="16"
