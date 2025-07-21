@@ -43,9 +43,9 @@ Estamos construindo um ecossistema onde:
 <td>
 
 **🚀 APIs de Performance Excepcional**
-- 41.000+ ops/sec média (Core v1.1.4)
-- 105.786 ops/sec criação de aplicação
-- 0,0095ms tempo médio de resposta
+- 2,8M+ ops/sec média (Core v1.2.0)
+- 10,9M ops/sec criação de aplicação
+- 36,9M ops/sec geração OpenAPI
 - Suporte a Array Callable (PHP 8.4+)
 - Benchmarks Docker validados
 
@@ -103,7 +103,7 @@ $app->run(); // É isso! Zero boilerplate
 - Compatível com PSR-7/PSR-15
 - Middleware de segurança integrado
 - Autenticação JWT & API Key
-- v1.1.4: Architectural Excellence & Performance Optimization Edition
+- v1.2.0: Edição Simplicidade - "Simplicidade sobre Otimização Prematura"
 
 </td>
 <td width="50%">
@@ -184,46 +184,11 @@ php run-benchmarks.php
 
 ### Extensões da Comunidade
 
-<table>
-<tr>
-<td width="33%">
-
-#### 📝 Swagger/OpenAPI
-**pivotphp/swagger**
-```php
-$app->register(new SwaggerProvider([
-    'version' => '3.0',
-    'title' => 'Minha API'
-]));
-```
-
-</td>
-<td width="33%">
-
-#### 📧 Serviço de Email
-**pivotphp/mail**
-```php
-$app->mail->send(
-    to: 'user@example.com',
-    subject: 'Bem-vindo!',
-    template: 'welcome'
-);
-```
-
-</td>
-<td width="33%">
-
-#### 🚦 Sistema de Filas
-**pivotphp/queue**
-```php
-$app->queue->push(
-    new SendEmailJob($user)
-);
-```
-
-</td>
-</tr>
-</table>
+**Recursos Integrados na v1.2.0:**
+- 📝 **OpenAPI/Swagger Automático** - Documentação API sem configuração
+- 🎯 **Interface Swagger UI Interativa** - Testes de API em /swagger
+- 🔄 **15+ Aliases Automáticos** - Zero breaking changes garantidos
+- 🎓 **Arquitetura Educacional** - Classes simples sobre complexas
 
 ### Criando Sua Própria Extensão
 
@@ -258,9 +223,9 @@ $app->register(new MyExtensionServiceProvider());
 
 | Métrica | Valor |
 |---------|-------|
-| **Performance Core** | 41.000+ ops/sec (v1.1.4) |
-| **Melhor Performance** | 105.786 ops/sec (criação app) |
-| **Latência** | 0,0095ms tempo médio |
+| **Performance Core** | 2,8M+ ops/sec (v1.2.0) |
+| **Melhor Performance** | 36,9M ops/sec (geração OpenAPI) |
+| **Criação App** | 10,9M ops/sec |
 | **Uso de Memória** | ~17.5MB (todas operações) |
 | **Extensões** | Core + ORM + ReactPHP |
 | **Status** | Pesquisa & Desenvolvimento |
@@ -349,25 +314,23 @@ Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pe
 <summary><strong>Foco Atual (Q3 2025)</strong></summary>
 
 - Estabilização do framework core ✅
-- Integração com Cycle ORM ✅
-- Extensão ReactPHP ✅
-- Coleção básica de middleware ✅
+- Integração com Cycle ORM v1.0.1 ✅
+- Extensão ReactPHP v0.1.0 ✅
 - Suite de benchmarking de performance ✅
-- Modo de alta performance (v1.1.0) ✅
-- Ferramenta CLI oficial (em progresso)
-- Package de utilitários de teste (planejado)
+- OpenAPI/Swagger integração v1.2.0 ✅
+- Interface de documentação interativa ✅
+- Arquitetura educacional simplificada ✅
+- Sistema de zero breaking changes ✅
 
 </details>
 
 <details>
 <summary><strong>Em Breve (Q4 2025)</strong></summary>
 
-**Extensões Oficiais:**
-- pivotphp/websocket - Servidor WebSocket em tempo real
-- pivotphp/cache - Cache multi-driver (Redis, Memcached)
-- pivotphp/swagger - Auto-geração OpenAPI/Swagger
-- pivotphp/queue - Processamento de jobs em background
-- pivotphp/mail - Abstração de serviço de email
+**Extensões da Comunidade:**
+- Integração WebSocket para extensão ReactPHP
+- Coleção aprimorada de middlewares
+- Utilitários e helpers de testes
 
 **Ferramentas do Desenvolvedor:**
 - Containers Docker de desenvolvimento
@@ -380,19 +343,16 @@ Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pe
 <details>
 <summary><strong>Visão Futura (2026)</strong></summary>
 
-**Extensões Avançadas:**
-- pivotphp/graphql - Implementação de servidor GraphQL
-- pivotphp/grpc - Suporte a serviços gRPC
-- pivotphp/events - Barramento de eventos distribuído
-- pivotphp/admin - Gerador de painel admin automático
-- pivotphp/testing - Utilitários avançados de teste
+**Extensões de Pesquisa:**
+- Monitoramento de performance aprimorado
+- Padrões avançados de middleware
+- Recursos estendidos de compliance PSR
 
-**Recursos Enterprise:**
-- Suporte multi-tenancy
-- Middleware de segurança avançada
-- Toolkit para microserviços
-- Integrações com plataformas cloud
-- Palestras e workshops em conferências
+**Visão de Longo Prazo:**
+- Estabilização do framework para uso em produção
+- Documentação e exemplos estendidos
+- Desenvolvimento dirigido pela comunidade
+- Recursos educacionais e tutoriais
 
 </details>
 

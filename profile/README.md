@@ -37,9 +37,9 @@ After years of wrestling with heavyweight frameworks and rigid architectures, we
 <td>
 
 **🚀 Exceptional Performance APIs**
-- 41,000+ ops/sec average (Core v1.1.4)
-- 105,786 ops/sec application creation
-- 0.0095ms average response time
+- 2.8M+ ops/sec average (Core v1.2.0)
+- 10.9M ops/sec application creation
+- 36.9M ops/sec OpenAPI generation
 - Array Callable support (PHP 8.4+)
 - Docker-validated benchmarks
 
@@ -100,7 +100,7 @@ $app->run(); // That's it! Zero boilerplate
 - PSR-7/PSR-15 hybrid implementation  
 - Built-in security middleware (CSRF, XSS, Rate limiting)
 - JWT & API Key authentication
-- v1.1.4: Architectural Excellence & Performance Optimization Edition
+- v1.2.0: Simplicity Edition - "Simplicidade sobre Otimização Prematura"
 
 </td>
 <td width="50%">
@@ -176,18 +176,17 @@ $app->runAsync(); // Non-blocking event loop
 The PivotPHP ecosystem is designed to be extended! We're excited to see what the community will build.
 
 **Built-in Core Features:**
-- 📝 **OpenAPI/Swagger** - Automatic API documentation generation
-- ⚡ **High-Performance Mode** - Object pooling & lazy loading (v1.1.0)
-- 🚀 **JSON Optimization** - Buffer pooling for JSON operations (v1.1.1)
+- 📝 **OpenAPI/Swagger** - Automatic API documentation generation (NEW v1.2.0)
+- 🎯 **Interactive Swagger UI** - Zero-config API testing interface (/swagger)
+- 🔄 **15+ Automatic Aliases** - Zero breaking changes guaranteed
+- 🎓 **Educational Architecture** - Simple over complex implementations
 - 🛡️ **Security Suite** - CSRF, XSS, Rate limiting built-in
 - 📊 **Performance Monitoring** - Real-time metrics and profiling
 
-**Planned Extensions:**
-- 📧 **Mail Service** - Email abstraction layer
-- 🚦 **Queue System** - Background job processing
-- 💾 **Advanced Caching** - Multi-driver support
-- 🔌 **WebSocket Server** - Real-time communication
-- 📊 **GraphQL** - Modern API queries
+**Future Extensions:**
+- 🔌 **WebSocket Server** - Real-time communication (planned)
+- 💾 **Advanced Caching** - Multi-driver support (concept)
+- 📊 **Additional Middleware** - Extended security and performance features
 
 ### Creating Your Own Extension
 
@@ -222,9 +221,9 @@ $app->register(new MyExtensionServiceProvider());
 
 | Metric | Value |
 |--------|-------|
-| **Core Performance** | 41,000+ ops/sec (v1.1.4) |
-| **Best Performance** | 105,786 ops/sec (app creation) |
-| **Latency** | 0.0095ms average time |
+| **Core Performance** | 2.8M+ ops/sec (v1.2.0) |
+| **Best Performance** | 36.9M ops/sec (OpenAPI generation) |
+| **App Creation** | 10.9M ops/sec |
 | **Memory Usage** | ~17.5MB (all operations) |
 | **Extensions** | Core + ORM + ReactPHP |
 | **Status** | Research & Development |
@@ -234,6 +233,13 @@ $app->register(new MyExtensionServiceProvider());
 ## 🔥 Built for Modern PHP
 
 ```php
+// 📝 Automatic OpenAPI/Swagger in 3 lines (NEW v1.2.0)
+use PivotPHP\Core\Middleware\Http\ApiDocumentationMiddleware;
+
+$app->use(new ApiDocumentationMiddleware());
+// ✅ Access: http://localhost:8080/swagger (Swagger UI)
+// ✅ Access: http://localhost:8080/docs (OpenAPI JSON)
+
 // 🔒 Secure API with JWT auth in 5 lines
 $app->group('/api/v1', function($group) {
     $group->middleware([Auth::jwt(), RateLimit::perMinute(100)]);
@@ -241,15 +247,16 @@ $app->group('/api/v1', function($group) {
     $group->resource('/posts', PostController::class);
 });
 
-// ✅ Type-safe validation out of the box
-$data = $req->validate([
-    'email' => 'required|email',
-    'name' => 'required|string|max:100'
-]);
-
-// 🔌 Real-time features in 2 lines
-$ws = new WebSocket\Server($app);
-$ws->on('message', fn($socket, $data) => $socket->broadcast('update', $data));
+// 📚 PHPDoc-powered automatic documentation
+$app->get('/users', function($req, $res) {
+    /**
+     * @summary List all users
+     * @description Returns paginated list of users
+     * @tags Users
+     * @response 200 array List of users
+     */
+    return $res->json(['users' => User::all()]);
+});
 ```
 
 ## 🚀 Getting Started
@@ -314,12 +321,12 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 - Core framework stabilization ✅
 - Cycle ORM integration v1.0.1 ✅
-- ReactPHP extension v0.0.2 ✅ 
-- Basic middleware collection ✅
+- ReactPHP extension v0.1.0 ✅ 
 - Performance benchmarking suite ✅
-- High-performance mode v1.1.0 ✅
-- Production validation complete ✅
-- Testing utilities package (in progress)
+- OpenAPI/Swagger integration v1.2.0 ✅
+- Interactive API documentation ✅
+- Simplified educational architecture ✅
+- Zero breaking changes system ✅
 
 </details>
 
@@ -327,11 +334,9 @@ Built by developers, for developers. Every decision is made with real-world usag
 <summary><strong>Coming Soon (Q4 2025)</strong></summary>
 
 **Community Extensions:**
-- WebSocket server for real-time communication
-- Multi-driver caching (Redis, Memcached)
-- OpenAPI/Swagger auto-generation
-- Background job processing
-- Email service abstraction
+- WebSocket integration for ReactPHP extension
+- Enhanced middleware collection
+- Testing utilities and helpers
 
 **Developer Tools:**
 - Docker development containers
@@ -344,19 +349,16 @@ Built by developers, for developers. Every decision is made with real-world usag
 <details>
 <summary><strong>Future Vision (2026)</strong></summary>
 
-**Advanced Extensions:**
-- pivotphp/graphql - GraphQL server implementation
-- pivotphp/grpc - gRPC service support
-- pivotphp/events - Distributed event bus
-- pivotphp/admin - Auto-admin panel generator
-- pivotphp/testing - Advanced testing utilities
+**Research Extensions:**
+- Enhanced performance monitoring
+- Advanced middleware patterns
+- Extended PSR compliance features
 
-**Enterprise Features:**
-- Multi-tenancy support
-- Advanced security middleware
-- Microservices toolkit
-- Cloud platform integrations
-- Conference talks and workshops
+**Long-term Vision:**
+- Framework stabilization for production use
+- Extended documentation and examples
+- Community-driven development
+- Educational resources and tutorials
 
 </details>
 
