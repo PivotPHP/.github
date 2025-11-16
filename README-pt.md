@@ -159,22 +159,20 @@ $app->runAsync(); // Event loop não-bloqueante
 </td>
 <td width="50%">
 
-### 📊 Suite de Benchmarking
-**[pivotphp-benchmarks](https://github.com/pivotphp/pivotphp-benchmarks)**
+### 📍 Core Routing
+**[pivotphp-core-routing](https://github.com/pivotphp/pivotphp-core-routing)**
 
-Ferramentas abrangentes de teste de performance e comparação.
-
-```bash
-# Execute benchmarks com Docker
-docker-compose up
-php run-benchmarks.php
-```
+Roteamento modular extraído do core para flexibilidade máxima.
 
 **Recursos:**
-- Testes isolados baseados em Docker
-- Comparações entre frameworks
-- Profiling de memória
-- Análise de tempo de resposta
+- **Express.js-Inspired API**: Familiar routing patterns (`get()`, `post()`, `put()`, `delete()`, etc.)
+- **High Performance**: Multi-level caching, route indexing, and memory optimization
+- **PSR Compliant**: Full PSR-7 (HTTP), PSR-15 (Middleware), PSR-6/PSR-16 (Cache) support
+- **Plugin System**: Extensible architecture with built-in plugins
+- **File Caching**: Persistent route compilation for faster startup
+- **Static File Serving**: Express-style static file management
+- **Type Safety**: Strict typing with PHPStan Level 9 compliance
+- **Modular**: Use independently or integrate with PivotPHP Core
 
 </td>
 </tr>
@@ -198,7 +196,7 @@ class MyExtensionServiceProvider extends ServiceProvider
     {
         $this->container->singleton('myservice', MyService::class);
     }
-    
+
     public function boot(): void
     {
         $this->app->get('/my-route', [MyController::class, 'handle']);

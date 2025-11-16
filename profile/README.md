@@ -1,4 +1,4 @@
-<div align="center">
+<div style="text-align: center; margin-bottom: 20px;">
 
 ![PivotPHP Banner](../assets/banner.svg)
 
@@ -8,9 +8,10 @@
 
 *Building tools that adapt to developers, not the other way around.*
 
-[![Inglês](https://img.shields.io/badge/README-em%20Ingl%C3%AAs-009c3b?style=flat&logo=Brazil&logoColor=white)](./README.md)
-[![Português](https://img.shields.io/badge/README-em%20Português-009c3b?style=flat&logo=Brazil&logoColor=white)](../README-pt.md)
+<!--[![Português](https://img.shields.io/badge/README-em%20Português-009c3b?style=flat&logo=Brazil&logoColor=white)](../README-pt.md)
+[![Inglês](https://img.shields.io/badge/README-em%20Ingl%C3%AAs-009c3b?style=flat&logo=Brazil&logoColor=white)](./README.md)-->
 [![GitHub followers](https://img.shields.io/github/followers/pivotphp?style=social)](https://github.com/pivotphp)
+
 
 ---
 
@@ -76,7 +77,7 @@ We're building an ecosystem where:
 <td width="50%">
 
 ### 💎 Core Framework
-**[pivotphp-core](https://github.com/PivotPHP/pivotphp-core)** 
+**[pivotphp-core](https://github.com/PivotPHP/pivotphp-core)**
 [![Packagist](https://img.shields.io/packagist/v/pivotphp/core.svg)](https://packagist.org/packages/pivotphp/core)
 [![Downloads](https://img.shields.io/packagist/dt/pivotphp/core.svg)](https://packagist.org/packages/pivotphp/core)
 
@@ -95,7 +96,7 @@ $app->run(); // That's it! Zero boilerplate
 
 **Features:**
 - Express.js-inspired routing with regex constraints
-- PSR-7/PSR-15 hybrid implementation  
+- PSR-7/PSR-15 hybrid implementation
 - Built-in security middleware (CSRF, XSS, Rate limiting)
 - JWT & API Key authentication
 - v1.2.0: Simplicity Edition - "Simplicidade sobre Otimização Prematura"
@@ -104,7 +105,7 @@ $app->run(); // That's it! Zero boilerplate
 <td width="50%">
 
 ### 🗄️ Cycle ORM Extension
-**[pivotphp-cycle-orm](https://github.com/PivotPHP/pivotphp-cycle-orm)** 
+**[pivotphp-cycle-orm](https://github.com/PivotPHP/pivotphp-cycle-orm)**
 [![Packagist](https://img.shields.io/packagist/v/pivotphp/cycle-orm.svg)](https://packagist.org/packages/pivotphp/cycle-orm)
 [![Downloads](https://img.shields.io/packagist/dt/pivotphp/cycle-orm.svg)](https://packagist.org/packages/pivotphp/cycle-orm)
 
@@ -140,7 +141,7 @@ $users = User::where('active', true)
 <td width="50%">
 
 ### ⚡ ReactPHP Extension
-**[pivotphp-reactphp](https://github.com/PivotPHP/pivotphp-reactphp)** 
+**[pivotphp-reactphp](https://github.com/PivotPHP/pivotphp-reactphp)**
 [![Packagist](https://img.shields.io/packagist/v/pivotphp/reactphp.svg)](https://packagist.org/packages/pivotphp/reactphp)
 [![Downloads](https://img.shields.io/packagist/dt/pivotphp/reactphp.svg)](https://packagist.org/packages/pivotphp/reactphp)
 
@@ -160,12 +161,31 @@ $app->runAsync(); // Non-blocking event loop
 **Features:**
 - Continuous runtime without restarts
 - PSR-7 bridge compatibility
-- Event-driven architecture  
+- Event-driven architecture
 - Memory management & isolation
 - Global state protection
 - v0.0.2: Stable production runtime
 
 </td>
+<td width="50%">
+
+### 📍 Core Routing
+**[pivotphp-core-routing](https://github.com/pivotphp/pivotphp-core-routing)**
+
+Roteamento modular extraído do core para flexibilidade máxima.
+
+**Recursos:**
+- **Express.js-Inspired API**: Familiar routing patterns (`get()`, `post()`, `put()`, `delete()`, etc.)
+- **High Performance**: Multi-level caching, route indexing, and memory optimization
+- **PSR Compliant**: Full PSR-7 (HTTP), PSR-15 (Middleware), PSR-6/PSR-16 (Cache) support
+- **Plugin System**: Extensible architecture with built-in plugins
+- **File Caching**: Persistent route compilation for faster startup
+- **Static File Serving**: Express-style static file management
+- **Type Safety**: Strict typing with PHPStan Level 9 compliance
+- **Modular**: Use independently or integrate with PivotPHP Core
+
+</td>
+
 </tr>
 </table>
 
@@ -196,7 +216,7 @@ class MyExtensionServiceProvider extends ServiceProvider
     {
         $this->container->singleton('myservice', MyService::class);
     }
-    
+
     public function boot(): void
     {
         $this->app->get('/my-route', [MyController::class, 'handle']);
@@ -319,7 +339,7 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 - Core framework stabilization ✅
 - Cycle ORM integration v1.0.1 ✅
-- ReactPHP extension v0.1.0 ✅ 
+- ReactPHP extension v0.1.0 ✅
 - Performance benchmarking suite ✅
 - OpenAPI/Swagger integration v1.2.0 ✅
 - Interactive API documentation ✅
