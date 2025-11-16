@@ -274,9 +274,7 @@ composer install && composer test
 
 **Junte-se a milhares de desenvolvedores construindo o futuro do PHP**
 
-[![Discord](https://img.shields.io/badge/Discord-Entrar%20no%20Chat-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/pivotphp)
 [![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/pivotphp/discussions)
-[![Twitter](https://img.shields.io/badge/Twitter-Seguir-1da1f2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/pivotphp)
 
 </div>
 
@@ -287,7 +285,7 @@ Acreditamos que grandes softwares vêm de grandes comunidades. Veja como você p
 - **Reporte bugs** e solicite recursos em nossas [Issues](https://github.com/pivotphp/pivotphp-core/issues)
 - **Submeta código** via Pull Requests em qualquer um dos nossos repositórios
 - **Melhore docs** editando nosso [website](https://github.com/pivotphp/website)
-- **Ajude outros** no [Discord](https://discord.gg/pivotphp) e [Discussions](https://github.com/orgs/pivotphp/discussions)
+- **Ajude outros** [Discussions](https://github.com/orgs/pivotphp/discussions)
 - **Espalhe a palavra** dando estrela nos repos e compartilhando com amigos
 
 ## 💡 Filosofia
@@ -361,7 +359,7 @@ Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pe
 ## 📜 Licença & Suporte
 
 - **Licença:** MIT (livre para uso comercial)
-- **Suporte:** Dirigido pela comunidade via Discord e GitHub
+- **Suporte:** Dirigido pela comunidade via GitHub
 - **Patrocínio:** [GitHub Sponsors](https://github.com/sponsors/pivotphp)
 
 ---
