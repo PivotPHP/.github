@@ -196,7 +196,7 @@ The PivotPHP ecosystem is designed to be extended! We're excited to see what the
 **Built-in Core Features:**
 - 📝 **OpenAPI/Swagger** - Automatic API documentation generation (NEW v1.2.0)
 - 🎯 **Interactive Swagger UI** - Zero-config API testing interface (/swagger)
-- 🔄 **15+ Automatic Aliases** - Zero breaking changes guaranteed
+- 📐 **Semantic Versioning** - Strict SemVer with a documented deprecation cycle (removals in v3.0.0)
 - 🎓 **Educational Architecture** - Simple over complex implementations
 - 🛡️ **Security Suite** - CSRF, XSS, Rate limiting built-in
 - 📊 **Performance Monitoring** - Real-time metrics and profiling
@@ -342,7 +342,7 @@ Built by developers, for developers. Every decision is made with real-world usag
 - OpenAPI/Swagger integration v1.2.0 ✅
 - Interactive API documentation ✅
 - Simplified educational architecture ✅
-- Zero breaking changes system ✅
+- Semantic versioning discipline ✅
 
 </details>
 
