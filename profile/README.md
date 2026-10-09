@@ -201,11 +201,6 @@ The PivotPHP ecosystem is designed to be extended! We're excited to see what the
 - 🛡️ **Security Suite** - CSRF, XSS, Rate limiting built-in
 - 📊 **Performance Monitoring** - Real-time metrics and profiling
 
-**Future Extensions:**
-- 🔌 **WebSocket Server** - Real-time communication (planned)
-- 💾 **Advanced Caching** - Multi-driver support (concept)
-- 📊 **Additional Middleware** - Extended security and performance features
-
 ### Creating Your Own Extension
 
 ```php
@@ -329,54 +324,6 @@ The best framework is the one you don't think about. PivotPHP stays out of your 
 
 ### 🤝 Community Driven
 Built by developers, for developers. Every decision is made with real-world usage in mind, not academic ideals.
-
-## 🗺️ Roadmap
-
-<details>
-<summary><strong>Current Focus (Q3 2025)</strong></summary>
-
-- Core framework stabilization ✅
-- Cycle ORM integration v1.0.1 ✅
-- ReactPHP extension v0.1.0 ✅
-- Performance benchmarking suite ✅
-- OpenAPI/Swagger integration v1.2.0 ✅
-- Interactive API documentation ✅
-- Simplified educational architecture ✅
-- Semantic versioning discipline ✅
-
-</details>
-
-<details>
-<summary><strong>Coming Soon (Q4 2025)</strong></summary>
-
-**Community Extensions:**
-- WebSocket integration for ReactPHP extension
-- Enhanced middleware collection
-- Testing utilities and helpers
-
-**Developer Tools:**
-- Docker development containers
-- VS Code extension with snippets
-- PHPStorm plugin
-- Deployment guides (Heroku, AWS, DigitalOcean)
-
-</details>
-
-<details>
-<summary><strong>Future Vision (2026)</strong></summary>
-
-**Research Extensions:**
-- Enhanced performance monitoring
-- Advanced middleware patterns
-- Extended PSR compliance features
-
-**Long-term Vision:**
-- Framework stabilization for production use
-- Extended documentation and examples
-- Community-driven development
-- Educational resources and tutorials
-
-</details>
 
 ## 👨‍💻 About the Creator
 
