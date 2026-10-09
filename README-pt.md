@@ -183,7 +183,7 @@ Roteamento modular extraído do core para flexibilidade máxima.
 **Recursos Integrados na v1.2.0:**
 - 📝 **OpenAPI/Swagger Automático** - Documentação API sem configuração
 - 🎯 **Interface Swagger UI Interativa** - Testes de API em /swagger
-- 🔄 **15+ Aliases Automáticos** - Zero breaking changes garantidos
+- 📐 **Versionamento Semântico** - SemVer rigoroso com ciclo de depreciação documentado (remoções na v3.0.0)
 - 🎓 **Arquitetura Educacional** - Classes simples sobre complexas
 
 ### Criando Sua Própria Extensão
@@ -314,7 +314,7 @@ Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pe
 - OpenAPI/Swagger integração v1.2.0 ✅
 - Interface de documentação interativa ✅
 - Arquitetura educacional simplificada ✅
-- Sistema de zero breaking changes ✅
+- Disciplina de versionamento semântico ✅
 
 </details>
 
