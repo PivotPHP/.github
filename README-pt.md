@@ -134,29 +134,7 @@ $usuarios = Usuario::where('ativo', true)
 </td>
 </tr>
 <tr>
-<td width="50%">
-
-### ⚡ Extensão ReactPHP
-**[pivotphp-reactphp](https://github.com/pivotphp/pivotphp-reactphp)** `composer require pivotphp/reactphp`
-
-Runtime assíncrono para aplicações de longa duração.
-
-```php
-// 🔄 Servidor contínuo sem reinicializações
-$app->register(new ReactServiceProvider([
-    'server' => ['host' => '0.0.0.0', 'port' => 8080]
-]));
-
-$app->runAsync(); // Event loop não-bloqueante
-```
-
-**Recursos:**
-- Arquitetura orientada a eventos
-- Operações I/O assíncronas
-- Timer e tarefas periódicas
-
-</td>
-<td width="50%">
+<td>
 
 ### 📍 Core Routing
 **[pivotphp-core-routing](https://github.com/pivotphp/pivotphp-core-routing)**
@@ -222,7 +200,7 @@ $app->register(new MyExtensionServiceProvider());
 | **Geração OpenAPI** | 3,6M ops/seg (Swagger UI) |
 | **HTTP Média** | 1.418 req/seg |
 | **Uso de Memória** | ~17.5MB (todas operações) |
-| **Extensões** | Core + ORM + ReactPHP |
+| **Extensões** | Core + ORM |
 | **Status** | Pesquisa & Desenvolvimento |
 
 </div>

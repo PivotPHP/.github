@@ -138,36 +138,7 @@ $users = User::where('active', true)
 </td>
 </tr>
 <tr>
-<td width="50%">
-
-### ⚡ ReactPHP Extension
-**[pivotphp-reactphp](https://github.com/PivotPHP/pivotphp-reactphp)**
-[![Packagist](https://img.shields.io/packagist/v/pivotphp/reactphp.svg)](https://packagist.org/packages/pivotphp/reactphp)
-[![Downloads](https://img.shields.io/packagist/dt/pivotphp/reactphp.svg)](https://packagist.org/packages/pivotphp/reactphp)
-
-`composer require pivotphp/reactphp`
-
-Async runtime for long-running applications.
-
-```php
-// 🔄 Continuous server without restarts
-$app->register(new ReactServiceProvider([
-    'server' => ['host' => '0.0.0.0', 'port' => 8080]
-]));
-
-$app->runAsync(); // Non-blocking event loop
-```
-
-**Features:**
-- Continuous runtime without restarts
-- PSR-7 bridge compatibility
-- Event-driven architecture
-- Memory management & isolation
-- Global state protection
-- v0.0.2: Stable production runtime
-
-</td>
-<td width="50%">
+<td>
 
 ### 📍 Core Routing
 **[pivotphp-core-routing](https://github.com/pivotphp/pivotphp-core-routing)**
@@ -238,7 +209,7 @@ $app->register(new MyExtensionServiceProvider());
 | **OpenAPI Generation** | 3.6M ops/sec (Swagger UI) |
 | **HTTP Average** | 1.418 req/sec |
 | **Memory Usage** | ~17.5MB (all operations) |
-| **Extensions** | Core + ORM + ReactPHP |
+| **Extensions** | Core + ORM |
 | **Status** | Research & Development |
 
 </div>
