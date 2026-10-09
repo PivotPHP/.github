@@ -152,7 +152,6 @@ $app->runAsync(); // Event loop não-bloqueante
 
 **Recursos:**
 - Arquitetura orientada a eventos
-- Suporte WebSocket (em breve)
 - Operações I/O assíncronas
 - Timer e tarefas periódicas
 
@@ -301,54 +300,6 @@ O melhor framework é aquele que você não pensa sobre. PivotPHP sai do seu cam
 
 ### 🤝 Dirigido pela Comunidade
 Construído por desenvolvedores, para desenvolvedores. Cada decisão é feita pensando no uso do mundo real, não em ideais acadêmicos.
-
-## 🗺️ Roadmap
-
-<details>
-<summary><strong>Foco Atual (Q3 2025)</strong></summary>
-
-- Estabilização do framework core ✅
-- Integração com Cycle ORM v1.0.1 ✅
-- Extensão ReactPHP v0.1.0 ✅
-- Suite de benchmarking de performance ✅
-- OpenAPI/Swagger integração v1.2.0 ✅
-- Interface de documentação interativa ✅
-- Arquitetura educacional simplificada ✅
-- Disciplina de versionamento semântico ✅
-
-</details>
-
-<details>
-<summary><strong>Em Breve (Q4 2025)</strong></summary>
-
-**Extensões da Comunidade:**
-- Integração WebSocket para extensão ReactPHP
-- Coleção aprimorada de middlewares
-- Utilitários e helpers de testes
-
-**Ferramentas do Desenvolvedor:**
-- Containers Docker de desenvolvimento
-- Extensão VS Code com snippets
-- Plugin PHPStorm
-- Guias de deployment (Heroku, AWS, DigitalOcean)
-
-</details>
-
-<details>
-<summary><strong>Visão Futura (2026)</strong></summary>
-
-**Extensões de Pesquisa:**
-- Monitoramento de performance aprimorado
-- Padrões avançados de middleware
-- Recursos estendidos de compliance PSR
-
-**Visão de Longo Prazo:**
-- Estabilização do framework para uso em produção
-- Documentação e exemplos estendidos
-- Desenvolvimento dirigido pela comunidade
-- Recursos educacionais e tutoriais
-
-</details>
 
 ## 👨‍💻 Sobre o Criador
 
