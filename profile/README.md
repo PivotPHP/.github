@@ -8,14 +8,11 @@
 
 *Building tools that adapt to developers, not the other way around.*
 
-<!--[![Português](https://img.shields.io/badge/README-em%20Português-009c3b?style=flat&logo=Brazil&logoColor=white)](../README-pt.md)
-[![Inglês](https://img.shields.io/badge/README-em%20Ingl%C3%AAs-009c3b?style=flat&logo=Brazil&logoColor=white)](./README.md)-->
 [![GitHub followers](https://img.shields.io/github/followers/pivotphp?style=social)](https://github.com/pivotphp)
-
 
 ---
 
-### ⚡ High-Performance Benchmarks | 🚀 Express.js syntax | 🧪 Active Development | 🔬 Research Project
+### ⚡ Focused Packages | 🚀 Express.js syntax | 🧪 Research Project
 
 ---
 
@@ -25,288 +22,85 @@
 
 **Making PHP development joyful again.**
 
-After years of wrestling with heavyweight frameworks and rigid architectures, we believe PHP developers deserve better. PivotPHP is an experimental framework exploring Express.js-inspired patterns in PHP.
+PivotPHP is an experimental PHP ecosystem exploring Express.js-inspired patterns — one small,
+focused package at a time.
 
-> **🧪 Project Status**: PivotPHP is a research and development project. Perfect for prototyping, learning, and validating API concepts. Currently not recommended for production use.
+> **🧪 Project Status**: PivotPHP is a research and development project. Perfect for prototyping,
+> learning, and validating API concepts. Not recommended for production use.
 
-## 🤔 Why PivotPHP?
+## 🏗️ Design Principles
 
-<table>
-<tr>
-<td>
+- **One thing well** — each package owns a single responsibility (routing, HTTP, security).
+- **PSR everywhere** — PSR-7 (HTTP), PSR-15 (middleware), PSR-17 (factories), PSR-11 (container),
+  PSR-14 (events).
+- **Small packages** — the core wires things together; features live in dedicated packages.
 
-**🚀 Exceptional Performance APIs**
-- 2.122 req/sec peak HTTP (Docker v1.2.0)
-- 1.418 req/sec average HTTP performance
-- 3.6M ops/sec OpenAPI generation
-- Array Callable support (PHP 8.4+)
-- Docker-validated benchmarks
+## 🌐 The Ecosystem
 
-</td>
-<td>
+| Package | Responsibility |
+|---|---|
+| [`pivotphp/core`](https://github.com/PivotPHP/pivotphp-core) | Microframework — wires app + routing + pipeline (container, events, hooks, extensions) |
+| [`pivotphp/http`](https://github.com/PivotPHP/pivotphp-http) | HTTP layer: PSR-7/PSR-17 (nyholm/psr7) + Express facade (`ExpressRequest`/`ExpressResponse`), body parsing, emitter |
+| [`pivotphp/core-routing`](https://github.com/PivotPHP/pivotphp-core-routing) | Routing engine — register, compile, match; groups; static files |
+| [`pivotphp/security`](https://github.com/PivotPHP/pivotphp-security) | PSR-15 security middlewares — CORS, security headers, CSRF, JWT, rate limiting, trusted proxies |
+| [`pivotphp/skeleton`](https://github.com/PivotPHP/pivotphp-skeleton) | `composer create-project` starter template |
+| [`pivotphp/benchmarks`](https://github.com/PivotPHP/pivotphp-benchmarks) | Docker-isolated benchmark suite (vs. Slim, Mezzio, Symfony, Webman) |
 
-**🎯 Developer First**
-- Express.js-like simplicity
-- Zero configuration
-- Intuitive API design
+## 💎 Quick Start
 
-</td>
-<td>
-
-**🧪 Research & Development**
-- Rapid API prototyping
-- Framework concept validation
-- Experimental features testing
-
-</td>
-</tr>
-</table>
-
-We're building an ecosystem where:
-- ⚡ **Performance comes first**, not as an afterthought
-- 🔧 **Flexibility is the default**, not a premium feature
-- 💝 **Developer experience matters**, from first `composer require` to production deploy
-- 🌱 **Evolution is encouraged**, letting your code grow naturally
-
-## 🌐 Our Ecosystem
-
-### Core Framework & Official Extensions
-
-<table>
-<tr>
-<td width="50%">
-
-### 💎 Core Framework
-**[pivotphp-core](https://github.com/PivotPHP/pivotphp-core)**
-[![Packagist](https://img.shields.io/packagist/v/pivotphp/core.svg)](https://packagist.org/packages/pivotphp/core)
-[![Downloads](https://img.shields.io/packagist/dt/pivotphp/core.svg)](https://packagist.org/packages/pivotphp/core)
-
-The heart of PivotPHP. Fast, unopinionated microframework with Express.js-inspired syntax.
+```bash
+composer create-project pivotphp/skeleton my-api
+cd my-api && composer serve      # http://localhost:8000
+```
 
 ```php
-// 🚀 Build APIs in seconds
+use PivotPHP\Core\Core\Application;
+
 $app = new Application();
 
-$app->get('/hello/:name', fn($req, $res) =>
-    $res->json(['message' => "Hello, {$req->params->name}!"])
-);
-
-$app->run(); // That's it! Zero boilerplate
-```
-
-**Features:**
-- Express.js-inspired routing with regex constraints
-- PSR-7/PSR-15 hybrid implementation
-- Built-in security middleware (CSRF, XSS, Rate limiting)
-- JWT & API Key authentication
-- v1.2.0: Simplicity Edition - "Simplicidade sobre Otimização Prematura"
-
-</td>
-<td width="50%">
-
-### 🗄️ Cycle ORM Extension
-**[pivotphp-cycle-orm](https://github.com/PivotPHP/pivotphp-cycle-orm)**
-[![Packagist](https://img.shields.io/packagist/v/pivotphp/cycle-orm.svg)](https://packagist.org/packages/pivotphp/cycle-orm)
-[![Downloads](https://img.shields.io/packagist/dt/pivotphp/cycle-orm.svg)](https://packagist.org/packages/pivotphp/cycle-orm)
-
-`composer require pivotphp/cycle-orm`
-
-Powerful database ORM integration with zero configuration.
-
-```php
-// 🔍 One line connection, type-safe queries
-$app->register(new CycleServiceProvider([
-    'dbal' => ['databases' => ['default' => [
-        'connection' => 'mysql://user:pass@localhost/db'
-    ]]]
+$app->get('/hello/:name', fn ($req, $res) => $res->json([
+    'message' => "Hello, {$req->param('name')}!",
 ]));
 
-$users = User::where('active', true)
-    ->with('posts')
-    ->limit(10)
-    ->get(); // Automatic query optimization
+$app->run();
 ```
 
-**Features:**
-- Zero-configuration setup
-- Automatic migrations & schema compilation
-- Repository pattern with type safety
-- Transaction middleware & monitoring
-- Multiple database connections (SQLite, MySQL)
-- v1.0.1: Performance profiling & query logging
-
-</td>
-</tr>
-<tr>
-<td>
-
-### 📍 Core Routing
-**[pivotphp-core-routing](https://github.com/pivotphp/pivotphp-core-routing)**
-
-Roteamento modular extraído do core para flexibilidade máxima.
-
-**Recursos:**
-- **Express.js-Inspired API**: Familiar routing patterns (`get()`, `post()`, `put()`, `delete()`, etc.)
-- **High Performance**: Multi-level caching, route indexing, and memory optimization
-- **PSR Compliant**: Full PSR-7 (HTTP), PSR-15 (Middleware), PSR-6/PSR-16 (Cache) support
-- **Plugin System**: Extensible architecture with built-in plugins
-- **File Caching**: Persistent route compilation for faster startup
-- **Static File Serving**: Express-style static file management
-- **Type Safety**: Strict typing with PHPStan Level 9 compliance
-- **Modular**: Use independently or integrate with PivotPHP Core
-
-</td>
-
-</tr>
-</table>
-
-### Community Extensions
-
-The PivotPHP ecosystem is designed to be extended! We're excited to see what the community will build.
-
-**Built-in Core Features:**
-- 📝 **OpenAPI/Swagger** - Automatic API documentation generation (NEW v1.2.0)
-- 🎯 **Interactive Swagger UI** - Zero-config API testing interface (/swagger)
-- 📐 **Semantic Versioning** - Strict SemVer with a documented deprecation cycle (removals in v3.0.0)
-- 🎓 **Educational Architecture** - Simple over complex implementations
-- 🛡️ **Security Suite** - CSRF, XSS, Rate limiting built-in
-- 📊 **Performance Monitoring** - Real-time metrics and profiling
-
-### Creating Your Own Extension
+Handlers receive `PivotPHP\Http\ExpressRequest`/`ExpressResponse` (the Express facade) over PSR-7.
+Security middlewares come from [`pivotphp/security`](https://github.com/PivotPHP/pivotphp-security):
 
 ```php
-// 1. Create Service Provider
-class MyExtensionServiceProvider extends ServiceProvider
-{
-    public function register(): void
-    {
-        $this->container->singleton('myservice', MyService::class);
-    }
+use PivotPHP\Http\Factory\Psr17Factory;
+use PivotPHP\Security\Cors\{CorsConfig, CorsMiddleware};
+use PivotPHP\Security\Headers\SecurityHeadersMiddleware;
 
-    public function boot(): void
-    {
-        $this->app->get('/my-route', [MyController::class, 'handle']);
-    }
-}
-
-// 2. Register in your app
-$app->register(new MyExtensionServiceProvider());
+$factory = new Psr17Factory();
+$app->use(new SecurityHeadersMiddleware());
+$app->use(new CorsMiddleware($factory, new CorsConfig(['https://app.example.com'])));
 ```
 
-**Extension Guidelines:**
-- Follow `pivotphp-{name}` naming convention
-- Provide comprehensive tests
-- Document with examples
-- Tag as `pivotphp-extension` on Packagist
+## 📊 Benchmarks
 
-## 📊 By the Numbers
-
-<div align="center">
-
-| Metric | Value |
-|--------|-------|
-| **HTTP Peak** | 2.122 req/sec (Docker v1.2.0) |
-| **OpenAPI Generation** | 3.6M ops/sec (Swagger UI) |
-| **HTTP Average** | 1.418 req/sec |
-| **Memory Usage** | ~17.5MB (all operations) |
-| **Extensions** | Core + ORM |
-| **Status** | Research & Development |
-
-</div>
-
-## 🔥 Built for Modern PHP
-
-```php
-// 📝 Automatic OpenAPI/Swagger in 3 lines (NEW v1.2.0)
-use PivotPHP\Core\Middleware\Http\ApiDocumentationMiddleware;
-
-$app->use(new ApiDocumentationMiddleware());
-// ✅ Access: http://localhost:8080/swagger (Swagger UI)
-// ✅ Access: http://localhost:8080/docs (OpenAPI JSON)
-
-// 🔒 Secure API with JWT auth in 5 lines
-$app->group('/api/v1', function($group) {
-    $group->middleware([Auth::jwt(), RateLimit::perMinute(100)]);
-    $group->get('/profile', fn($req, $res) => $res->json($req->user));
-    $group->resource('/posts', PostController::class);
-});
-
-// 📚 PHPDoc-powered automatic documentation
-$app->get('/users', function($req, $res) {
-    /**
-     * @summary List all users
-     * @description Returns paginated list of users
-     * @tags Users
-     * @response 200 array List of users
-     */
-    return $res->json(['users' => User::all()]);
-});
-```
-
-## 🚀 Getting Started
-
-### 👨‍💻 Quick Start (60 seconds)
-```bash
-# Create your first PivotPHP app
-composer create-project pivotphp/skeleton my-api
-cd my-api && php -S localhost:8000
-
-# 🎉 Your API is now running at http://localhost:8000
-```
-
-### 🤝 For Contributors
-```bash
-# Join the development
-git clone https://github.com/PivotPHP/pivotphp-core.git
-cd pivotphp-core
-composer install && composer test
-```
+Realistic, Docker-isolated benchmarks (same voting API across frameworks) live in
+[`pivotphp/benchmarks`](https://github.com/PivotPHP/pivotphp-benchmarks). PHP-FPM frameworks
+(PivotPHP, Slim, Mezzio, Symfony) run in the same ballpark; async runtimes (Webman) are faster but
+are a different architecture. Numbers are WSL2-relative — see the reports for details and caveats.
 
 ## 🤝 Community
 
-<div align="center">
+- **Report bugs / request features** in each repository's Issues (see its `.github/` templates)
+- **Improve docs** via the [website](https://github.com/PivotPHP/website)
+- **Discuss** in [GitHub Discussions](https://github.com/orgs/pivotphp/discussions)
 
-**Join thousands of developers building the future of PHP**
+## 📦 Archived
 
-[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/pivotphp/discussions)
-
-</div>
-
-### How to Contribute
-
-We believe great software comes from great communities. Here's how you can help:
-
-- **Report bugs** and request features in our [Issues](https://github.com/PivotPHP/pivotphp-core/issues)
-- **Submit code** via Pull Requests to any of our repositories
-- **Improve docs** by editing our [website](https://github.com/PivotPHP/website)
-- **Help others** in [Discussions](https://github.com/orgs/pivotphp/discussions)
-- **Spread the word** by starring our repos and sharing with friends
-
-## 💡 Philosophy
-
-### 🌱 Evolutionary Design
-Like DNA that adapts to different environments, PivotPHP evolves with your project. Start simple, scale complex, never rewrite.
-
-### ⚡ Performance First
-Every line of code is optimized. We measure everything and make performance visible, because fast APIs make happy users.
-
-### 💝 Developer Happiness
-The best framework is the one you don't think about. PivotPHP stays out of your way while providing the tools you need.
-
-### 🤝 Community Driven
-Built by developers, for developers. Every decision is made with real-world usage in mind, not academic ideals.
-
-## 👨‍💻 About the Creator
-
-**[Caio Alberto Fernandes](https://github.com/CAFernandes)** started PivotPHP after 6 years of frustration with existing PHP frameworks. What began as a weekend experiment to bring Express.js elegance to PHP has grown into a movement for better developer tools.
-
-*"I believe the best frameworks are invisible—they amplify your skills without imposing their opinions. PivotPHP is my attempt to build that invisible layer for PHP developers."*
+- `pivotphp/cycle-orm` — **[paused](https://github.com/PivotPHP/pivotphp-specs/blob/main/SPECS/SPEC-103-archive-cycle-orm.md)**;
+  targets PivotPHP Core 1.x and is not yet migrated to Core 4.x. Not abandoned — it will be
+  revisited.
 
 ## 📜 License & Support
 
-- **License:** MIT (free for commercial use)
-- **Support:** Community-driven via GitHub
-- **Sponsorship:** [GitHub Sponsors](https://github.com/sponsors/pivotphp)
+- **License:** MIT
+- **Sponsorship:** [GitHub Sponsors](https://github.com/sponsors/CAFernandes)
 
 ---
 
@@ -314,12 +108,8 @@ Built by developers, for developers. Every decision is made with real-world usag
 
 ### ⭐ Star our repositories to show your support!
 
-**[💎 Core Framework](https://github.com/PivotPHP/pivotphp-core)** • **[🗄️ Cycle ORM](https://github.com/PivotPHP/pivotphp-cycle-orm)** • **[📚 Website](https://github.com/PivotPHP/website)** • **[🎓 Examples](https://github.com/PivotPHP/examples)**
+**[💎 Core](https://github.com/PivotPHP/pivotphp-core)** • **[🌐 HTTP](https://github.com/PivotPHP/pivotphp-http)** • **[🛡️ Security](https://github.com/PivotPHP/pivotphp-security)** • **[🚀 Skeleton](https://github.com/PivotPHP/pivotphp-skeleton)**
 
----
-
-**Made with love by the PHP community, for the PHP community.**
-
-*PivotPHP: Code that evolves with you.*
+*PivotPHP: code that evolves with you.*
 
 </div>
