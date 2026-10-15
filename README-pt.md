@@ -30,9 +30,9 @@ pacote pequeno e focado de cada vez.
 
 ## 🏗️ Princípios de design
 
-- **Fazer bem uma coisa** — cada pacote tem uma única responsabilidade (roteamento, HTTP, segurança).
+- **Fazer bem uma coisa** — cada pacote tem uma única responsabilidade (roteamento, HTTP, segurança, logging).
 - **PSR em tudo** — PSR-7 (HTTP), PSR-15 (middleware), PSR-17 (factories), PSR-11 (container),
-  PSR-14 (eventos).
+  PSR-14 (eventos), PSR-3 (logging).
 - **Pacotes pequenos** — o core apenas conecta as peças; recursos vivem em pacotes dedicados.
 
 ## 🌐 O ecossistema
@@ -43,6 +43,7 @@ pacote pequeno e focado de cada vez.
 | [`pivotphp/http`](https://github.com/PivotPHP/pivotphp-http) | Camada HTTP: PSR-7/PSR-17 (nyholm/psr7) + fachada Express (`ExpressRequest`/`ExpressResponse`), parsing de corpo, emissor |
 | [`pivotphp/core-routing`](https://github.com/PivotPHP/pivotphp-core-routing) | Motor de roteamento — registrar, compilar, casar; grupos; arquivos estáticos |
 | [`pivotphp/security`](https://github.com/PivotPHP/pivotphp-security) | Middlewares PSR-15 de segurança — CORS, headers, CSRF, JWT, rate limiting, proxies confiáveis |
+| [`pivotphp/logger`](https://github.com/PivotPHP/pivotphp-logger) | Logging estruturado PSR-3 com Monolog — canais, formato JSON, mascaramento de dados sensíveis |
 | [`pivotphp/skeleton`](https://github.com/PivotPHP/pivotphp-skeleton) | Template inicial via `composer create-project` |
 | [`pivotphp/benchmarks`](https://github.com/PivotPHP/pivotphp-benchmarks) | Suíte de benchmark em Docker (vs. Slim, Mezzio, Symfony, Webman) |
 
@@ -108,7 +109,7 @@ rápidos, mas com arquitetura diferente. Os números são relativos ao WSL2 — 
 
 ### ⭐ Dê uma estrela nos repositórios para apoiar!
 
-**[💎 Core](https://github.com/PivotPHP/pivotphp-core)** • **[🌐 HTTP](https://github.com/PivotPHP/pivotphp-http)** • **[🛡️ Security](https://github.com/PivotPHP/pivotphp-security)** • **[🚀 Skeleton](https://github.com/PivotPHP/pivotphp-skeleton)**
+**[💎 Core](https://github.com/PivotPHP/pivotphp-core)** • **[🌐 HTTP](https://github.com/PivotPHP/pivotphp-http)** • **[🛡️ Security](https://github.com/PivotPHP/pivotphp-security)** • **[📝 Logger](https://github.com/PivotPHP/pivotphp-logger)** • **[🚀 Skeleton](https://github.com/PivotPHP/pivotphp-skeleton)**
 
 *PivotPHP: código que evolui com você.*
 
